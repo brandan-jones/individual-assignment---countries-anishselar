@@ -1,6 +1,6 @@
 package app.plantdiary.individualassignment3048q.dao
 
-import app.plantdiary.individualassignment3048q.dto.Country
+import app.plantdiary.individualassignment304832.dto.Country
 import retrofit2.Call
 import retrofit2.http.GET
 
