@@ -1,6 +1,9 @@
 package app.plantdiary.individualassignment304832.dto
 
-class Country constructor(code: String, name: String) {
-    var code = code
-    var name = name
+import com.google.gson.annotations.SerializedName
+
+class Country(@SerializedName("Code") var code: String, @SerializedName("Name")  var name: String) {
+    override fun toString(): String {
+        return "$name $code"
+    }
 }
