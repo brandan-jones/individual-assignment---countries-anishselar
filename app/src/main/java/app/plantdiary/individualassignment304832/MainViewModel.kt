@@ -1,16 +1,19 @@
 package app.plantdiary.individualassignment304832
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import app.plantdiary.individualassignment304832.dto.Country
-import app.plantdiary.individualassignment304832.service.CountryService
+import app.plantdiary.individualassignment3048q.dto.Country
+import app.plantdiary.individualassignment3048q.service.CountryService
 
 class MainViewModel : ViewModel() {
-    var countries : MutableLiveData<List<Country>> = MutableLiveData<List<Country>>()
-    var countryService : CountryService = CountryService()
-    fun fetchCountries(){
+    var countries: MutableLiveData<ArrayList<Country>> = MutableLiveData<ArrayList<Country>>()
+    var countryService: CountryService = CountryService()
 
+    init {
+        fetchCountries()
     }
 
+    fun fetchCountries() {
+        countries = countryService.fetchCountries("Zambia")
+    }
 }
